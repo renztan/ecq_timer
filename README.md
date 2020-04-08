@@ -1,1 +1,1 @@
-# ecq_countdown
+# ecq_timer
