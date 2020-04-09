@@ -1,0 +1,243 @@
+@import '~normalize.css/normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700&display=swap');
+
+/* GENERAL */
+
+body {
+	font-family: 'Montserrat', Helvetica, sans-serif;
+	background-color: #1b1b1e;
+	color: #a9bcd0;
+}
+
+a {
+	color: #58a4b0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.75rem;
+}
+h4 {
+	font-size: 1.5rem;
+}
+h5 {
+	font-size: 1.25rem;
+}
+h6 {
+	font-size: 1rem;
+}
+
+/* COMPONENTS */
+.footer {
+	padding: 1rem;
+	width: calc(100vw - 2rem);
+}
+
+.footer--sticky {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+
+.footer__text {
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.background_image {
+	position: absolute;
+	z-index: -1;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.background_image__image {
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	filter: opacity(10%) grayscale(100%) blur(0px);
+	transition: filter 2500ms;
+}
+
+.background_image__image--transitioning {
+	filter: opacity(0%) grayscale(100%) blur(5px);
+}
+
+.background_image__author {
+	color: #fff;
+	opacity: 50%;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	z-index: 1;
+	text-align: right;
+	font-size: 10px;
+}
+
+.countdown {
+	margin-top: -5rem;
+	margin-bottom: 1rem;
+}
+
+.countdown__content {
+	display: flex;
+	align-items: center;
+}
+
+.countdown__item {
+	width: 65px;
+	text-align: center;
+}
+
+.countdown__text__title {
+	margin-bottom: 0;
+	text-transform: uppercase;
+	opacity: 0.75;
+	font-size: 0.75rem;
+}
+
+.countdown__text__timer,
+.countdown__text__separator {
+	font-family: 'Anton', Helvetica, sans-serif;
+	font-weight: 700;
+	font-size: 2rem;
+	letter-spacing: 0.5rem;
+	font-style: italic;
+	color: #fff;
+}
+
+.countdown__text__separator {
+	padding: 0;
+}
+
+.tips {
+	border: 1px solid #a9bcd0;
+	max-width: 800px;
+	width: calc(100% - 2rem);
+	padding: 2rem 1rem 1rem;
+	margin: 3rem 0 1rem;
+	position: relative;
+}
+
+.tips__title {
+	position: absolute;
+	top: -2rem;
+	left: 0;
+	padding: 0 0.5rem;
+	font-size: 1.5rem;
+}
+
+.tips__controller {
+	position: absolute;
+	bottom: -3rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.tips__button {
+	background-color: #a9bcd0;
+	color: #1b1b1e;
+	border: 1px solid #a9bcd0;
+	border-radius: 4px;
+	font-size: 0.75rem;
+	padding: 0.5rem;
+	margin: 0 0.5rem;
+	cursor: pointer;
+	font-weight: 700;
+}
+
+.tips__button:first-child {
+	margin-left: 0;
+}
+
+.tips__button:last-child {
+	margin-right: 0;
+}
+
+.tips__text {
+	text-align: center;
+}
+
+/* PAGES */
+.page__full {
+	width: calc(100vw - 2rem);
+	height: calc(100vh - 2rem);
+	padding: 1rem;
+}
+.page__main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 480px) {
+	.countdown__item {
+		width: 80px;
+	}
+
+	.countdown__text__title {
+		font-size: 1rem;
+	}
+
+	.countdown__text__timer,
+	.countdown__text__separator {
+		font-size: 3rem;
+	}
+
+	.countdown__text__separator {
+		padding: 0 0.25rem;
+	}
+
+	.tips__controller {
+		bottom: unset;
+		left: unset;
+		transform: unset;
+		top: -2.2rem;
+		right: 0rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.countdown__item {
+		width: 120px;
+	}
+
+	.countdown__text__timer,
+	.countdown__text__separator {
+		font-size: 5rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.countdown__item {
+		width: 160px;
+	}
+
+	.countdown__text__timer,
+	.countdown__text__separator {
+		font-size: 8rem;
+	}
+}
